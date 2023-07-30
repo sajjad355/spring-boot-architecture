@@ -19,7 +19,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @RestController
-@RequestMapping("/loginV2")
+@RequestMapping("/login")
 public class LoginControl extends ParentControl {
 
   private final static Logger LOGGER = LoggerFactory.getLogger(LoginControl.class);

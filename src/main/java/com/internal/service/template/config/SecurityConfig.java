@@ -29,9 +29,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-    http.csrf().disable().authorizeRequests().antMatchers("/loginV2/requestResetPassword/**").permitAll().
-      antMatchers("/loginV2/updatePassword/**").permitAll()
-      .antMatchers("/loginV2/authenticate").permitAll().anyRequest().authenticated()
+    http.csrf().disable().authorizeRequests().antMatchers("/login/requestResetPassword/**").permitAll().
+      antMatchers("/login/updatePassword/**").permitAll()
+      .antMatchers("/login/authenticate").permitAll().anyRequest().authenticated()
       .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     http.addFilterBefore(authRequestFilter, UsernamePasswordAuthenticationFilter.class);
 	}
