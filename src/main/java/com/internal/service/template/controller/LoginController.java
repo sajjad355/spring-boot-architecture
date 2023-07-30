@@ -20,9 +20,9 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/login")
-public class LoginControl extends ParentControl {
+public class LoginController extends ParentController {
 
-  private final static Logger LOGGER = LoggerFactory.getLogger(LoginControl.class);
+  private final static Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
   @Autowired
   AuthenticationManager authManager;

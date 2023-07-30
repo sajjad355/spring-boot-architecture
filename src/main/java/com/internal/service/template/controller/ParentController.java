@@ -7,12 +7,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public abstract class ParentControl {
+public abstract class ParentController {
 
   @Autowired
   UserHistoryRepository userHistoryRepo;
 
-  private final static Logger LOGGER = LoggerFactory.getLogger(ParentControl.class);
+  private final static Logger LOGGER = LoggerFactory.getLogger(ParentController.class);
 
 
   @Transactional(rollbackFor = Exception.class)

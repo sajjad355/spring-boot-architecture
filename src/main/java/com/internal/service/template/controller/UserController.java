@@ -16,9 +16,9 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/user")
-public class UserControl extends ParentControl {
+public class UserController extends ParentController {
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(UserControl.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
 	@Autowired
     UserRepository userRepository;

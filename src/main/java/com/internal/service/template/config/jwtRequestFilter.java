@@ -21,7 +21,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 
 @Component
-public class AuthRequestFilter extends OncePerRequestFilter {
+public class jwtRequestFilter extends OncePerRequestFilter {
 	@Autowired
 	private TemplateUserDetailsService userDetailService;
 

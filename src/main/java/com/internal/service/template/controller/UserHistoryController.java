@@ -9,11 +9,11 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/userhistory")
-public class UserHistoryControl extends ParentControl {
+public class UserHistoryController extends ParentController {
 
   @Autowired
   UserHistoryRepository userHistoryRepo;
 
-  private final static Logger LOGGER = LoggerFactory.getLogger(UserHistoryControl.class);
+  private final static Logger LOGGER = LoggerFactory.getLogger(UserHistoryController.class);
 
 }

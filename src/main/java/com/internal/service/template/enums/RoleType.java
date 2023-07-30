@@ -1,5 +1,5 @@
 package com.internal.service.template.enums;
 
-public enum Role {
+public enum RoleType {
 	Admin, User
 }
