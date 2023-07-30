@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.internal.service.template.security.JWTUtil;
+import com.internal.service.template.security.TemplateUserDetailsService;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -16,8 +18,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.internal.service.template.dto.TemplateUserDetailsService;
-import com.internal.service.template.util.JWTUtil;
+
 
 @Component
 public class AuthRequestFilter extends OncePerRequestFilter {
