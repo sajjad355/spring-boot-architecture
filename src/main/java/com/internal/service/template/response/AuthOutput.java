@@ -1,9 +1,9 @@
-package com.internal.service.template.dto;
+package com.internal.service.template.response;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import com.internal.service.template.model.UserV2;
+import com.internal.service.template.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,7 +38,7 @@ public class AuthOutput {
     private List<GrantedAuthority> authorities;
 
 
-    public AuthOutput(UserV2 user, String jWT_STRING) {
+    public AuthOutput(User user, String jWT_STRING) {
         this.userId = user.getUserId();
         this.name = user.getName();
         this.email = user.getEmail();

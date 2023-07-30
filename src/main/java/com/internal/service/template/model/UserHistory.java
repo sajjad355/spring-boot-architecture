@@ -15,8 +15,8 @@ import org.hibernate.annotations.CreationTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "il_user_history")
-public class UserHistoryV2 {
+@Table(name = "audit_trail")
+public class UserHistory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,9 +34,6 @@ public class UserHistoryV2 {
 
     @Column(nullable = false,length=100)
     private String activity;
-
-    @Column(nullable = true)
-    private Integer vialId;
 
     @Lob
     private String description;

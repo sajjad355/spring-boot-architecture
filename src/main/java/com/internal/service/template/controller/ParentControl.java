@@ -1,7 +1,7 @@
 package com.internal.service.template.controller;
 
-import com.internal.service.template.repository.UserHistoryRepositoryV2;
-import com.internal.service.template.model.UserHistoryV2;
+import com.internal.service.template.repository.UserHistoryRepository;
+import com.internal.service.template.model.UserHistory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.slf4j.Logger;
@@ -10,15 +10,15 @@ import org.slf4j.LoggerFactory;
 public abstract class ParentControl {
 
   @Autowired
-  UserHistoryRepositoryV2 userHistoryRepo;
+  UserHistoryRepository userHistoryRepo;
 
   private final static Logger LOGGER = LoggerFactory.getLogger(ParentControl.class);
 
 
   @Transactional(rollbackFor = Exception.class)
-  protected UserHistoryV2 saveUserHistory(String username, String component, String activity, String description) {
+  protected UserHistory saveUserHistory(String username, String component, String activity, String description) {
     LOGGER.info("saveUserHistory");
-    UserHistoryV2 userHistory = new UserHistoryV2();
+    UserHistory userHistory = new UserHistory();
 
     userHistory.setActivity(activity);
     userHistory.setActivityTime(new java.util.Date(System.currentTimeMillis()));
@@ -28,7 +28,7 @@ public abstract class ParentControl {
     userHistory.setDescription(sb.toString());
     userHistory.setUsername(username);
     LOGGER.info(String.format("UserHistory Details : %s", userHistory));
-    UserHistoryV2 userHistoryResponse = userHistoryRepo.save(userHistory);
+    UserHistory userHistoryResponse = userHistoryRepo.save(userHistory);
     LOGGER.info("User History save complete");
     return userHistoryResponse;
   }

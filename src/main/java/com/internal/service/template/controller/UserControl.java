@@ -1,7 +1,7 @@
 package com.internal.service.template.controller;
 
-import com.internal.service.template.model.UserV2;
-import com.internal.service.template.repository.UserRepositoryV2;
+import com.internal.service.template.model.User;
+import com.internal.service.template.repository.UserRepository;
 import com.internal.service.template.exception.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -16,33 +16,33 @@ import org.slf4j.LoggerFactory;
 
 @RestController
 @RequestMapping("/userV2")
-public class UserControlV2 extends ParentControl {
+public class UserControl extends ParentControl {
 
-	private final static Logger LOGGER = LoggerFactory.getLogger(UserControlV2.class);
+	private final static Logger LOGGER = LoggerFactory.getLogger(UserControl.class);
 
 	@Autowired
-	UserRepositoryV2 userRepository;
+    UserRepository userRepository;
 
 	@Autowired
 	PasswordEncoder encoder;
 
 	@GetMapping("/all")
-	public List<UserV2> getAllUsers() {
+	public List<User> getAllUsers() {
 		LOGGER.info("/userV2 received GET /all mapped to getAllUsers");
-		List<UserV2> allUsers = userRepository.findAll();
+		List<User> allUsers = userRepository.findAll();
 		return allUsers;
 	}
 
 	@PostMapping("/save")
-	public UserV2 save(@Valid @RequestBody UserV2 userData) throws MessagingException {
+	public User save(@Valid @RequestBody User userData) throws MessagingException {
 		LOGGER.info(String.format("/save received request with user %s", userData));
 		String userPassword = null;
 		String action;
 		String auditTrailRecord;
 		if (userData.getUserId() > 0) {
-			UserV2 user = userRepository.findByUserId(userData.getUserId());
+			User user = userRepository.findByUserId(userData.getUserId());
 			if (user == null) {
-				throw new EntityNotFoundException(UserV2.class, "id", String.valueOf(user.getUserId()));
+				throw new EntityNotFoundException(User.class, "id", String.valueOf(user.getUserId()));
 			}
 			userPassword = user.getPassword();
 			if (userPassword != null) {
@@ -56,7 +56,7 @@ public class UserControlV2 extends ParentControl {
 		String password = encoder.encode(userData.getPassword());
 		userData.setPassword(password);
 
-		UserV2 savedUser = userRepository.save(userData);
+		User savedUser = userRepository.save(userData);
 		super.saveUserHistory(savedUser.getEditedBy(), "User", action, "");
 		return savedUser;
 	}

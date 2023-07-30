@@ -1,4 +1,4 @@
-package com.internal.service.template.dto;
+package com.internal.service.template.security;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.internal.service.template.model.UserV2;
+import com.internal.service.template.model.User;
 
 public class TemplateUserDetails implements UserDetails{
 	
@@ -26,7 +26,7 @@ public class TemplateUserDetails implements UserDetails{
 	boolean enabled;
 
 
-	public TemplateUserDetails(UserV2 user) {
+	public TemplateUserDetails(User user) {
 		setAuthorities(Arrays.stream(user.getRole().split(","))
 				.map(SimpleGrantedAuthority::new)
 				.collect(Collectors.toList()));

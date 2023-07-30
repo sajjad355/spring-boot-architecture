@@ -1,4 +1,4 @@
-package com.internal.service.template.dto;
+package com.internal.service.template.request;
 
 public class AuthInput {
 
