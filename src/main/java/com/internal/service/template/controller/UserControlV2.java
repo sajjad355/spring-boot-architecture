@@ -1,9 +1,8 @@
-package com.internal.service.template.controller2;
+package com.internal.service.template.controller;
 
-import com.internal.service.template.model2.UserV2;
-import com.internal.service.template.repository2.UserRepositoryV2;
-import com.internal.service.template.error.EntityNotFoundException;
-import org.hibernate.Hibernate;
+import com.internal.service.template.model.UserV2;
+import com.internal.service.template.repository.UserRepositoryV2;
+import com.internal.service.template.exception.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +13,6 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @RestController
 @RequestMapping("/userV2")

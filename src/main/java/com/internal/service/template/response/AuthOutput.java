@@ -3,7 +3,7 @@ package com.internal.service.template.dto;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import com.internal.service.template.model2.UserV2;
+import com.internal.service.template.model.UserV2;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,10 +1,10 @@
-package com.internal.service.template.repository2;
+package com.internal.service.template.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.internal.service.template.model2.UserHistoryV2;
+import com.internal.service.template.model.UserHistoryV2;
 import java.util.List;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;

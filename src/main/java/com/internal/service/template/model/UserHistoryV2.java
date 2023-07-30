@@ -1,4 +1,4 @@
-package com.internal.service.template.model2;
+package com.internal.service.template.model;
 
 import java.util.Date;
 import javax.persistence.*;

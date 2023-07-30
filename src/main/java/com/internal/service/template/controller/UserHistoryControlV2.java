@@ -1,7 +1,7 @@
-package com.internal.service.template.controller2;
+package com.internal.service.template.controller;
 
-import com.internal.service.template.model2.UserHistoryV2;
-import com.internal.service.template.repository2.UserHistoryRepositoryV2;
+import com.internal.service.template.model.UserHistoryV2;
+import com.internal.service.template.repository.UserHistoryRepositoryV2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;

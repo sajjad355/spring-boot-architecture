@@ -7,7 +7,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.internal.service.template.model2.UserV2;
+import com.internal.service.template.model.UserV2;
 
 public class TemplateUserDetails implements UserDetails{
 	

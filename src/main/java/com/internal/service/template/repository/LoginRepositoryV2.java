@@ -1,6 +1,6 @@
-package com.internal.service.template.repository2;
+package com.internal.service.template.repository;
 
-import com.internal.service.template.model2.UserV2;
+import com.internal.service.template.model.UserV2;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

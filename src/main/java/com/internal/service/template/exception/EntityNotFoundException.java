@@ -1,4 +1,4 @@
-package com.internal.service.template.error;
+package com.internal.service.template.exception;
 
 import java.util.HashMap;
 import java.util.Map;

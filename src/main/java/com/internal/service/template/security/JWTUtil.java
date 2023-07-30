@@ -1,4 +1,4 @@
-package com.internal.service.template.utils;
+package com.internal.service.template.util;
 
 import java.util.Date;
 import java.util.HashMap;

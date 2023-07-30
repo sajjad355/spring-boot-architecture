@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.internal.service.template.dto.TemplateUserDetailsService;
-import com.internal.service.template.utils.JWTUtil;
+import com.internal.service.template.util.JWTUtil;
 
 @Component
 public class AuthRequestFilter extends OncePerRequestFilter {

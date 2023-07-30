@@ -8,8 +8,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.internal.service.template.model2.UserV2;
-import com.internal.service.template.repository2.UserRepositoryV2;
+import com.internal.service.template.model.UserV2;
+import com.internal.service.template.repository.UserRepositoryV2;
 
 @Service
 public class TemplateUserDetailsService implements UserDetailsService {

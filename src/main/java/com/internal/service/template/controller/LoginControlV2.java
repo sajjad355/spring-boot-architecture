@@ -1,11 +1,11 @@
-package com.internal.service.template.controller2;
+package com.internal.service.template.controller;
 
 import com.internal.service.template.dto.AuthInput;
 import com.internal.service.template.dto.AuthOutput;
 import com.internal.service.template.dto.TemplateUserDetailsService;
-import com.internal.service.template.model2.UserV2;
-import com.internal.service.template.repository2.LoginRepositoryV2;
-import com.internal.service.template.utils.JWTUtil;
+import com.internal.service.template.model.UserV2;
+import com.internal.service.template.repository.LoginRepositoryV2;
+import com.internal.service.template.util.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
